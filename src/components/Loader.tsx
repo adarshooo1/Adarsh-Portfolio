@@ -8,7 +8,7 @@ const Loader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentLanguageIndex((prevIndex) => prevIndex + 1);
-    }, 300);
+    }, 400);
 
     return () => clearTimeout(timer);
   }, [currentLanguageIndex]);
@@ -16,7 +16,7 @@ const Loader = () => {
   const currentLanguage = languages[currentLanguageIndex % languages.length];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-zinc-900 text-white">
+    <div className="flex flex-col items-center justify-center h-screen bg-[rgb(16,16,16)] text-white">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
