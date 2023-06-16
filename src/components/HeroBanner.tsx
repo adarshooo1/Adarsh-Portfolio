@@ -23,18 +23,18 @@ const HeroBanner = (props: Props) => {
       <Image
         src="/my-image.webp"
         alt="My Image"
-        className="relative mx-auto object-cover rounded-md"
+        className="relative rounded-3xl mx-auto object-cover transition-all hover:scale-110"
         width={150}
         height={150}
       />
 
       <div className="z-20">
-        <h2 className="text-sm uppercase text-white pb-2 tracking-[15px]">
+        <h2 className="text-sm uppercase text-white pb-2 tracking-[15px] transition-all hover:scale-125">
           Software Engineer
         </h2>
         <h1 className="text-5xl lg:6xl font-semibold scroll-px-10">
-          <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <span className="mr-3 text-orange-400">{text}</span>
+          <Cursor cursorColor="#FB923C" />
         </h1>
 
         <div className="pt-5">
