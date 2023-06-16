@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .heroButton{
-        @apply px-6 py-2 border-[#f0ecec] rounded-full uppercase text-xs tracking-widest text-white mx-3 transition-all hover:text-[#F7AB0A]/40 hover:border-[#F7AB0A] hover:border-[1px]
-    }
+@layer components {
+  .heroButton {
+    @apply px-6 py-2 border-[#f0ecec] rounded-full uppercase text-xs tracking-widest text-white mx-3 transition-all hover:text-[#F7AB0A]/40 hover:border-[#F7AB0A] hover:border-[1px];
+  }
 }

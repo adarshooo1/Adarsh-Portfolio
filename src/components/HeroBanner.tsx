@@ -26,6 +26,7 @@ const HeroBanner = (props: Props) => {
         className="relative rounded-3xl mx-auto object-cover transition-all hover:scale-110"
         width={150}
         height={150}
+        priority={true}
       />
 
       <div className="z-20">
