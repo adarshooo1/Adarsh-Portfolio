@@ -3,6 +3,7 @@ import Loader from "../components/Loader";
 import Head from "next/head";
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
+import About from "@/components/About";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -31,7 +32,7 @@ const HomePage = () => {
           <Header />
 
           {/* Hero */}
-          <section id="hero" className="snap-center">
+          <section id="hero" className="snap-start">
             <HeroBanner />
           </section>
 
@@ -39,6 +40,9 @@ const HomePage = () => {
           {/* <BackgroundCircles /> */}
 
           {/* about */}
+          <section id="about" className="snap-center">
+          <About />
+          </section>
 
           {/* skills */}
 
