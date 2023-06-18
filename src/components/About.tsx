@@ -31,7 +31,6 @@ const About = (props: Props) => {
         viewport={{ once: true }}
         src="/My-Image2.webp"
         className="-mb-20  md:mb-0 flex-shrink-0 w-52 h-52 rounded-full object-cover md:rounded-lg md:w-56 md:h-80 xl:w-[300px] xl:h-[400px]"
-        // className="h-80 w-60 rounded-lg mx-7 md:w-52 md:h-52 md:rounded-full"
       />
       <div className="space-y-10 px-0 md:px-10">
         <h4 className=" text-white uppercase text-3xl font-semibold">
