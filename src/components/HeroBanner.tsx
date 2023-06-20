@@ -23,15 +23,15 @@ const HeroBanner = (props: Props) => {
       <Image
         src="/my-image.webp"
         alt="My Image"
-        className="relative rounded-3xl mx-auto object-cover transition-all hover:scale-110"
+        className="relative rounded-full mx-auto object-cover transition-all hover:scale-110"
         width={150}
         height={150}
         priority={true}
       />
 
       <div className="z-20">
-        <h2 className="text-sm uppercase text-white pb-2 tracking-[15px] transition-all hover:scale-125">
-          Software Engineer
+        <h2 className="text-sm uppercase text-white pb-2 transition-all hover:scale-125">
+          <span className="tracking-[15px]">Software Enginee</span>r
         </h2>
         <h1 className="text-5xl lg:6xl font-semibold scroll-px-10">
           <span className="mr-3 text-orange-400">{text}</span>
@@ -40,16 +40,16 @@ const HeroBanner = (props: Props) => {
 
         <div className="pt-5">
           <Link href="#about">
-            <button className="heroButton">About</button>
-          </Link>
-          <Link href="#project">
-            <button className="heroButton">Project</button>
+            <button className="heroButton tracking-[3px]">About</button>
           </Link>
           <Link href="#skills">
-            <button className="heroButton">Skills</button>
+            <button className="heroButton tracking-[3px]">Skills</button>
+          </Link>
+          <Link href="#project">
+            <button className="heroButton tracking-[3px]">Project</button>
           </Link>
           <Link href="#contact">
-            <button className="heroButton">Contact</button>
+            <button className="heroButton tracking-[3px]">Contact</button>
           </Link>
         </div>
       </div>

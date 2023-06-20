@@ -16,8 +16,8 @@ const About = (props: Props) => {
       viewport={{ once: true }}
       className="h-screen flex relative flex-col text-center md:text-left md:flex-row justify-evenly max-w-7xl px-10 mx-auto items-center"
     >
-      <h3 className="uppercase text-white tracking-[20px] absolute top-24">
-        About
+      <h3 className="uppercase text-white absolute top-24 flex text-2xl">
+        <span className="tracking-[20px]">Abou</span>t
       </h3>
       <motion.img
         initial={{
@@ -26,11 +26,12 @@ const About = (props: Props) => {
         }}
         transition={{
           duration: 1.2,
+          delay: 0.5,
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         src="/My-Image2.webp"
-        className="-mb-20  md:mb-0 flex-shrink-0 w-52 h-52 rounded-full object-cover md:rounded-lg md:w-56 md:h-80 xl:w-[300px] xl:h-[400px]"
+        className="-mb-20 md:xs:mb-5 md:mb-0 flex-shrink-0 w-52 h-52 rounded-full object-cover md:rounded-lg md:w-56 md:h-80 xl:w-[300px] xl:h-[400px]"
       />
       <div className="space-y-10 px-0 md:px-10">
         <h4 className=" text-white uppercase text-3xl font-semibold">

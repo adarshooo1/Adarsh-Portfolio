@@ -4,6 +4,8 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -45,8 +47,14 @@ const HomePage = () => {
           </section>
 
           {/* skills */}
+          <section id="skills" className="snap-center">
+            <Skills />
+          </section>
 
           {/* projects */}
+          <section id="projects" className="snap-center">
+            <Projects/>
+          </section>
 
           {/* Contact */}
         </>
