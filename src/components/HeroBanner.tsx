@@ -45,10 +45,10 @@ const HeroBanner = (props: Props) => {
           <Link href="#skills">
             <button className="heroButton tracking-[3px]">Skills</button>
           </Link>
-          <Link href="#project">
+          <Link href="#projects">
             <button className="heroButton tracking-[3px]">Project</button>
           </Link>
-          <Link href="#contact">
+          <Link href="#contacts">
             <button className="heroButton tracking-[3px]">Contact</button>
           </Link>
         </div>

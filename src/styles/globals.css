@@ -10,5 +10,9 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 0.3px;
   }
+
+  .contactInput {
+    @apply outline-none bg-gray-700/50 rounded-sm border-b px-6 py-4 border-gray-500 text-white placeholder-slate-700 transition-all focus:border-[#FB923C]/40 focus:text-[#FB923C] hover:border-[#FB923C]/40;
+  }
 }
 

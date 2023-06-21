@@ -36,13 +36,13 @@ const About = (props: Props) => {
       <div className="space-y-10 px-0 md:px-10">
         <h4 className=" text-white uppercase text-3xl font-semibold">
           Here is a little{" "}
-          <span className="uppercase tracking-[3px] stroked-text text-red-500">
+          <span className="uppercase tracking-[3px] stroked-text text-orange-500">
             Introduction
           </span>
         </h4>
         <p className="text-base">
           "Hi, I'm
-          <span className="uppercase tracking-[3px] stroked-text text-red-500 text-lg font-semibold">
+          <span className="uppercase tracking-[3px] stroked-text text-orange-500 text-lg font-semibold">
             {" "}
             Adarsh Kumar Singh
           </span>

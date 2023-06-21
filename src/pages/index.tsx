@@ -6,6 +6,7 @@ import HeroBanner from "@/components/HeroBanner";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -57,6 +58,9 @@ const HomePage = () => {
           </section>
 
           {/* Contact */}
+          <section id="contacts" className="snap-center">
+            <Contact/>
+          </section>
         </>
       )}
     </div>
