@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {Cursor, useTypewriter } from "react-simple-typewriter";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
 type Props = {};
@@ -10,15 +10,16 @@ function Projects({}: Props) {
 
   return (
     <motion.div
-    initial={{opacity:0}}
-    whileInView={{opacity:1}}
-    transition={{duration:1.5}}
-    className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+    >
       <h3 className="absolute top-24 uppercase text-2xl text-white">
         <span className="tracking-[20px]">project</span>s
       </h3>
 
-      <div className="reltive w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 -mb-40">
+      <div className="reltive w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-[#FB923C] scrollbar-thin">
         {projects.map((project, i) => (
           <div
             key={i}
@@ -30,17 +31,26 @@ function Projects({}: Props) {
               width={500}
               alt="Project 1"
             />
+
             <div className="space-y-10 px-0 md:px-10 mx-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 Project {i + 1} of 3:{" "}
                 <span className="uppercase font-bold">
-                  <ProjectTypewriter words={[project]} loop delay={1000} /><Cursor />
+                  <ProjectTypewriter words={[project]} loop delay={1000} />
+                  <Cursor />
                 </span>
               </h4>
               <p className="text-sm text-center md:text-left">
-                {project} app Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum numquam doloribus laborum recusandae laudantium sapiente molestias eaque nisi iste libero, odit, voluptatibus obcaecati similique incidunt aperiam ipsum adipisci sed facere minus ipsam qui? Quaerat accusamus excepturi nobis facere, dolorum nostrum! Vel ad dignissimos assumenda sapiente praesentium, asperiores suscipit aliquam illum.
+                {project} app Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Rerum numquam doloribus laborum recusandae
+                laudantium sapiente molestias eaque nisi iste libero, odit,
+                voluptatibus obcaecati similique incidunt aperiam ipsum adipisci
+                sed facere minus ipsam qui? Quaerat accusamus excepturi nobis
+                facere, dolorum nostrum! Vel ad dignissimos assumenda sapiente
+                praesentium, asperiores suscipit aliquam illum.
               </p>
             </div>
+            
           </div>
         ))}
       </div>
