@@ -50,12 +50,12 @@ const HomePage = ({pageInfo , skills , projects , socials}: Props) => {
           <Header socials={socials} />
           {/* Hero */}
           <section id="hero" className="snap-start">
-            <HeroBanner />
+            <HeroBanner pageInfo={pageInfo} />
           </section>
 
           {/* about */}
           <section id="about" className="snap-center">
-            <About />
+            <About pageInfo = {pageInfo}/>
           </section>
 
           {/* skills */}

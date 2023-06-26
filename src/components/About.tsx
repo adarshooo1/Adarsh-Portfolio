@@ -1,9 +1,22 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { PageInfo } from "../../typings";
+import { urlFor } from "../../adarsh-portfolio-backend";
+import { once } from "events";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
+  const [text, count] = useTypewriter({
+    words: [`${pageInfo?.name}`],
+    typeSpeed: 100,
+    loop: true,
+    delaySpeed: 800,
+  });
+
   return (
     <motion.div
       initial={{
@@ -30,28 +43,23 @@ const About = (props: Props) => {
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src="/My-Image2.webp"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 md:xs:mb-5 md:mb-0 flex-shrink-0 w-52 h-52 rounded-full object-cover md:rounded-lg md:w-56 md:h-80 xl:w-[300px] xl:h-[400px]"
       />
       <div className="space-y-10 px-0 md:px-10">
         <h4 className=" text-white uppercase text-3xl font-semibold">
           Here is a little{" "}
-          <span className="uppercase tracking-[3px] stroked-text text-orange-500">
+          <span className="uppercase tracking-[3px] text-orange-500">
             Introduction
           </span>
         </h4>
-        <p className="text-base">
-          "Hi, I'm
-          <span className="uppercase tracking-[3px] stroked-text text-orange-500 text-lg font-semibold">
-            {" "}
-            Adarsh Kumar Singh
+        <p className="text-lg">
+          "Hi, I'm{" "}
+          <span className="uppercase tracking-[3px] text-orange-500 text-lg font-semibold">
+            {text}
           </span>
-          , a management student with a passion for technology. Despite my
-          academic background, I've always had a strong desire to learn and
-          explore the world of development. I am a self-taught developer,
-          constantly seeking opportunities to enhance my skills and expand my
-          knowledge in various tech domains. With a curious mindset and
-          dedication, I strive to create meaningful and innovative solutions."
+          <Cursor cursorColor="#FB923C" />
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>

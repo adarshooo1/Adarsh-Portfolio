@@ -1,5 +1,3 @@
-import { defineField, defineType } from 'sanity';
-
 export default {
   name: 'pageInfo',
   title: 'PageInfo',
@@ -47,10 +45,15 @@ export default {
       type: 'string',
     },
     {
+      name: 'backgroundInformation',
+      title: 'BackgroundInformation',
+      type: 'string',
+    },
+    {
       name: 'socials',
       title: 'Socials',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'social' } }], // Corrected type from 'socials' to 'social'
+      of: [{type: 'reference', to: {type: 'social'}}], // Corrected type from 'socials' to 'social'
     },
   ],
-};
+}

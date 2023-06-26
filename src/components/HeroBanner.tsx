@@ -1,15 +1,18 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-import Image from "next/image";
 import Link from "next/link";
+import { PageInfo } from "../../typings";
+import { urlFor } from "../../adarsh-portfolio-backend";
 
-type Props = {};
+type Props = {
+  pageInfo : PageInfo;
+};
 
-const HeroBanner = (props: Props) => {
+const HeroBanner = ({pageInfo}: Props) => {
   const [text, count] = useTypewriter({
     words: [
-      "Hii , I'm Adarsh Singh",
+      `Hii , I'm ${pageInfo?.name}`,
       "< A self taught developer />",
       "< Eat,  Code,  Sleep />",
     ],
@@ -20,18 +23,15 @@ const HeroBanner = (props: Props) => {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <Image
-        src="/my-image.webp"
+      <img
+        className="relative rounded-full h-48 w-48 mx-auto object-cover transition-all hover:scale-110"
+        src={urlFor(pageInfo?.heroImage).url()}
         alt="My Image"
-        className="relative rounded-full mx-auto object-cover transition-all hover:scale-110"
-        width={150}
-        height={150}
-        priority={true}
       />
 
       <div className="z-20">
-        <h2 className="text-sm uppercase text-white pb-2 transition-all hover:scale-125">
-          <span className="tracking-[15px]">Software Enginee</span>r
+        <h2 className="text-sm tracking-[15px] uppercase text-white pb-2 transition-all hover:scale-125">
+         {pageInfo.role}
         </h2>
         <h1 className="text-5xl lg:6xl font-semibold scroll-px-10">
           <span className="mr-3 text-orange-400">{text}</span>
