@@ -9,8 +9,21 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Link from "next/link";
 import { MdArrowUpward } from "react-icons/md";
+import { GetStaticProps, NextPage } from "next";
+import { PageInfo, Project, Skill, Social } from "../../typings";
+import { fetchPageInfo } from "../../utils/fetchPageInfo";
+import { fetchProjects } from "../../utils/fetchProjects";
+import { fetchSKills } from "../../utils/fetchSkills";
+import { fetchSocials } from "../../utils/fetchSocials";
 
-const HomePage = () => {
+type Props = {
+  pageInfo : PageInfo;
+  skills : Skill[];
+  projects : Project[];
+  socials : Social[];
+}
+
+const HomePage = ({pageInfo , skills , projects , socials}: Props) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -34,8 +47,7 @@ const HomePage = () => {
       ) : (
         <>
           {/* Header */}
-          <Header />
-
+          <Header socials={socials} />
           {/* Hero */}
           <section id="hero" className="snap-start">
             <HeroBanner />
@@ -75,3 +87,21 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
+export const getStaticProps: GetStaticProps<Props> = async() =>{
+  const pageInfo : PageInfo  = await fetchPageInfo();
+  const projects : Project[]  = await fetchProjects();
+  const skills : Skill[] = await fetchSKills();
+  const socials : Social[]  = await fetchSocials();
+
+  return {
+    props:{
+      pageInfo,
+      projects,
+      skills,
+      socials,
+    },
+    revalidate : 10,
+  }
+}
