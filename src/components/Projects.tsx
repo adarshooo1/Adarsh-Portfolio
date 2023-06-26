@@ -1,13 +1,14 @@
 import React from "react";
-import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { Project } from "../../typings";
+import { urlFor } from "../../adarsh-portfolio-backend";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-function Projects({}: Props) {
-  const projects = ["Portfolio", "Nike Shoe Store", "Microsoft Store Frontend"];
-
+function Projects({ projects }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,32 +26,46 @@ function Projects({}: Props) {
             key={i}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            <Image
-              src="/Project-Portfolio.webp"
-              height={200}
-              width={500}
-              alt="Project 1"
+            <motion.img
+              initial={{
+                y: -300,
+                opacity: 0,
+              }}
+              transition={{ duration: 1.5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              src={urlFor(project?.image).url()}
+              alt={project?.title}
             />
 
             <div className="space-y-10 px-0 md:px-10 mx-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 Project {i + 1} of 3:{" "}
                 <span className="uppercase font-bold">
-                  <ProjectTypewriter words={[project]} loop delay={1000} />
+                  <ProjectTypewriter
+                    words={[project?.title]}
+                    loop
+                    delay={1000}
+                  />
                   <Cursor />
                 </span>
               </h4>
-              <p className="text-sm text-center md:text-left">
-                {project} app Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Rerum numquam doloribus laborum recusandae
-                laudantium sapiente molestias eaque nisi iste libero, odit,
-                voluptatibus obcaecati similique incidunt aperiam ipsum adipisci
-                sed facere minus ipsam qui? Quaerat accusamus excepturi nobis
-                facere, dolorum nostrum! Vel ad dignissimos assumenda sapiente
-                praesentium, asperiores suscipit aliquam illum.
+
+              <div className="flex items-center space-x-2 justify-center">
+                {project?.technologies.map((technology) => (
+                  <img
+                    className="h-10 w-10"
+                    key={technology._id}
+                    src={urlFor(technology.image).url()}
+                    alt=""
+                  />
+                ))}
+              </div>
+
+              <p className="text-lg text-center md:text-left">
+                {project?.summary}
               </p>
             </div>
-            
           </div>
         ))}
       </div>

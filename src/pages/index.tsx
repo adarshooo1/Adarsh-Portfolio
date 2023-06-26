@@ -17,13 +17,13 @@ import { fetchSKills } from "../../utils/fetchSkills";
 import { fetchSocials } from "../../utils/fetchSocials";
 
 type Props = {
-  pageInfo : PageInfo;
-  skills : Skill[];
-  projects : Project[];
-  socials : Social[];
-}
+  pageInfo: PageInfo;
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+};
 
-const HomePage = ({pageInfo , skills , projects , socials}: Props) => {
+const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -55,17 +55,17 @@ const HomePage = ({pageInfo , skills , projects , socials}: Props) => {
 
           {/* about */}
           <section id="about" className="snap-center">
-            <About pageInfo = {pageInfo}/>
+            <About pageInfo={pageInfo} />
           </section>
 
           {/* skills */}
           <section id="skills" className="snap-center">
-            <Skills />
+            <Skills skills={skills} />
           </section>
 
           {/* projects */}
           <section id="projects" className="snap-center">
-            <Projects />
+            <Projects projects={projects} />
           </section>
 
           {/* Contact */}
@@ -88,20 +88,19 @@ const HomePage = ({pageInfo , skills , projects , socials}: Props) => {
 
 export default HomePage;
 
-
-export const getStaticProps: GetStaticProps<Props> = async() =>{
-  const pageInfo : PageInfo  = await fetchPageInfo();
-  const projects : Project[]  = await fetchProjects();
-  const skills : Skill[] = await fetchSKills();
-  const socials : Social[]  = await fetchSocials();
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const projects: Project[] = await fetchProjects();
+  const skills: Skill[] = await fetchSKills();
+  const socials: Social[] = await fetchSocials();
 
   return {
-    props:{
+    props: {
       pageInfo,
       projects,
       skills,
       socials,
     },
-    revalidate : 10,
-  }
-}
+    revalidate: 10,
+  };
+};
