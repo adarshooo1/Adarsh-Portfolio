@@ -3,7 +3,6 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { PageInfo } from "../../typings";
 import { urlFor } from "../../adarsh-portfolio-backend";
-import { once } from "events";
 
 type Props = {
   pageInfo: PageInfo;
@@ -59,7 +58,9 @@ const About = ({ pageInfo }: Props) => {
             {text}
           </span>
           <Cursor cursorColor="#FB923C" />
+          <br />
           {pageInfo?.backgroundInformation}
+          
         </p>
       </div>
     </motion.div>

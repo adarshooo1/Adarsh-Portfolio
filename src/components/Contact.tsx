@@ -1,8 +1,7 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { FaLinkedin } from "react-icons/fa";
-import Link from "next/link";
+
 type Inputs = {
   name: string;
   email: string;
@@ -47,17 +46,6 @@ function Contact({}: Props) {
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-orange-500 h-7 w-7 animate-pulse" />
             <p className="text-2xl">Sec-102, Noida, G.B Nagar</p>
-          </div>
-
-          <div className="flex items-center space-x-5 justify-center">
-            <FaLinkedin className="text-orange-500 h-7 w-7 animate-pulse" />
-            <p className="text-2xl"></p>
-            <Link
-              href="https://www.linkedin.com/in/adarshooo1/"
-              className="text-2xl"
-            >
-              adarshooo1
-            </Link>
           </div>
         </div>
 
