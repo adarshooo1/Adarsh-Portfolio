@@ -40,7 +40,7 @@ export default function Header({ socials }: Props) {
         ))}
       </motion.div>
 
-      <Link href="#contacts">
+      <Link href="#contacts" passHref>
         <motion.div
           initial={{
             x: -500,
