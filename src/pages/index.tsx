@@ -74,7 +74,9 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
           </section>
 
           <span>
-            <Link href="#hero">
+            <Link href="#hero" passHref>
+              {" "}
+              {/* Add the passHref prop */}
               <footer className="sticky bottom-5 w-[30px] h-[30px] cursor-pointer m-5 scroll-smooth">
                 <MdArrowUpward className="animate-bounce text-3xl text-orange-500" />
               </footer>

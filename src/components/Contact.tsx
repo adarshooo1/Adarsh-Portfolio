@@ -47,6 +47,7 @@ function Contact({}: Props) {
             <MapPinIcon className="text-orange-500 h-7 w-7 animate-pulse" />
             <p className="text-2xl">Sec-102, Noida, G.B Nagar</p>
           </div>
+
         </div>
 
         <form

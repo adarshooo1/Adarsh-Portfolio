@@ -39,16 +39,16 @@ const HeroBanner = ({pageInfo}: Props) => {
         </h1>
 
         <div className="pt-5">
-          <Link href="#about">
+          <Link href="#about" passHref>
             <button className="heroButton tracking-[3px]">About</button>
           </Link>
-          <Link href="#skills">
+          <Link href="#skills" passHref>
             <button className="heroButton tracking-[3px]">Skills</button>
           </Link>
-          <Link href="#projects">
+          <Link href="#projects" passHref>
             <button className="heroButton tracking-[3px]">Project</button>
           </Link>
-          <Link href="#contacts">
+          <Link href="#contacts" passHref>
             <button className="heroButton tracking-[3px]">Contact</button>
           </Link>
         </div>

@@ -36,3 +36,4 @@ next-env.d.ts
 
 # Sanity
 adarsh-portfolio-backend/node_modules
+.vercel
