@@ -15,6 +15,7 @@ interface Image {
 
 export interface PageInfo extends SanityBody {
   _type: "pageInfo";
+  address: string;
   backgroundInformation: string;
   email: string;
   role: string;
@@ -45,7 +46,6 @@ export interface Project extends SanityBody {
   linkToBuild: string;
   summary: string;
   technologies: Technology[];
-
   progress: number;
 }
 

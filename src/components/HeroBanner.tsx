@@ -25,7 +25,7 @@ const HeroBanner = ({pageInfo}: Props) => {
       <BackgroundCircles />
       <img
         className="relative rounded-full h-48 w-48 mx-auto object-cover transition-all hover:scale-110"
-        src={urlFor(pageInfo?.heroImage).url()}
+        src={urlFor(pageInfo?.heroImage)?.url()}
         alt="My Image"
       />
 

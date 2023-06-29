@@ -40,24 +40,24 @@ export default function Header({ socials }: Props) {
         ))}
       </motion.div>
 
-      <Link href="#contacts" passHref>
-        <motion.div
-          initial={{
-            x: -500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            delay: 2,
-            duration: 1,
-          }}
-          className="flex flex-row items-center text-gray-300"
-        >
+      <motion.div
+        initial={{
+          x: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          delay: 2,
+          duration: 1,
+        }}
+        className="flex flex-row items-center text-gray-300"
+      >
+        <Link href="#contacts" passHref>
           <SocialIcon
             className="cursor-pointer"
             network="email"
@@ -67,8 +67,8 @@ export default function Header({ socials }: Props) {
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get In Touch
           </p>
-        </motion.div>
-      </Link>
+        </Link>
+      </motion.div>
     </header>
   );
 }
