@@ -25,10 +25,10 @@ const About = ({ pageInfo }: Props) => {
         duration: 1.2,
       }}
       animate={{ opacity: 1 }} // Updated from `whileInView` to `animate`
-      className="h-screen flex relative flex-col text-center md:text-left md:flex-row justify-evenly max-w-7xl px-10 mx-auto items-center"
+      className="h-[125vh] flex relative flex-col text-center md:text-left md:flex-row justify-evenly max-w-7xl px-10 xs:px-2 mx-auto items-center"
     >
       <h3 className="uppercase text-white absolute top-24 flex text-2xl">
-        <span className="tracking-[20px]">About</span> {/* Fixed typo */}
+        <span className="tracking-[20px]">Abou</span>t {/* Fixed typo */}
       </h3>
       <motion.img
         initial={{
@@ -41,16 +41,18 @@ const About = ({ pageInfo }: Props) => {
         }}
         animate={{ opacity: 1, x: 0 }} // Updated from `whileInView` to `animate`
         src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-20 md:xs:mb-5 md:mb-0 flex-shrink-0 w-52 h-52 rounded-full object-cover md:rounded-lg md:w-56 md:h-80 xl:w-[300px] xl:h-[400px]"
+        // Only for image
+        className="object-cover mt-20 flex-shrink-0 rounded-full xl:ml-20 xl:rounded-lg md:rounded-md xl:w-[270px] xl:h-[350px] md:w-[230px] md:h-[300px] md:-mt-8 md:ml-8 sm:h-[210px] sm:w-[210px] sm:mt-32 xs:h-[210px] xs:w-[210px] xs:mt-32"
+        // md:xs:mb-5 md:mb-0 flex-shrink-0 w-52 h-52 rounded-full object-cover md:rounded-lg md:w-56 md:h-80
       />
-      <div className="space-y-10 px-0 md:px-10">
+      <div className="space-y-10 px-10 xs:px-1 mb-10">
         <h4 className="text-white uppercase text-3xl font-semibold">
           Here is a little{" "}
           <span className="uppercase tracking-[3px] text-orange-500">
             Introduction
           </span>
         </h4>
-        <p className="text-lg">
+        <p className="md:text-md sm:text-sm lg:text-lg xl:text-xl">
           Hi, I&apos;m{" "}
           <span className="uppercase tracking-[3px] text-orange-500 text-lg font-semibold">
             {text}
@@ -65,4 +67,3 @@ const About = ({ pageInfo }: Props) => {
 };
 
 export default About;
-

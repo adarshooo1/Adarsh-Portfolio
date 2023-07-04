@@ -54,7 +54,7 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
           </section>
 
           {/* about */}
-          <section id="about" className="snap-center">
+          <section id="about" className="snap-start">
             <About pageInfo={pageInfo} />
           </section>
 
@@ -73,12 +73,12 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
             <Contact />
           </section>
 
-          <span>
+          <span className="sticky bottom-6 ml-6 flex justify-start">
             <Link href="#heroBanner" passHref>
               {" "}
               {/* Add the passHref prop */}
-              <footer className="sticky bottom-5 w-[30px] h-[30px] cursor-pointer m-5 scroll-smooth">
-                <MdArrowUpward className="animate-bounce text-3xl text-orange-500" />
+              <footer className="w-[30px] h-[30px] cursor-pointer m-5 scroll-smooth">
+                <MdArrowUpward className="animate-bounce text-4xl text-orange-500" />
               </footer>
             </Link>
           </span>
