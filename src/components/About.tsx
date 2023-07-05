@@ -45,14 +45,14 @@ const About = ({ pageInfo }: Props) => {
         className="object-cover mt-20 flex-shrink-0 rounded-full xl:ml-20 xl:rounded-lg md:rounded-md xl:w-[270px] xl:h-[350px] md:w-[230px] md:h-[300px] md:-mt-8 md:ml-8 sm:h-[210px] sm:w-[210px] sm:mt-32 xs:h-[210px] xs:w-[210px] xs:mt-32"
         // md:xs:mb-5 md:mb-0 flex-shrink-0 w-52 h-52 rounded-full object-cover md:rounded-lg md:w-56 md:h-80
       />
-      <div className="space-y-10 px-10 xs:px-1 mb-10">
+      <div className="space-y-10 px-10 xs:px-5 mb-10">
         <h4 className="text-white uppercase text-3xl font-semibold">
           Here is a little{" "}
           <span className="uppercase tracking-[3px] text-orange-500">
             Introduction
           </span>
         </h4>
-        <p className="md:text-md sm:text-sm lg:text-lg xl:text-xl">
+        <p className="md:text-md sm:text-sm lg:text-lg xl:text-xl text-left">
           Hi, I&apos;m{" "}
           <span className="uppercase tracking-[3px] text-orange-500 text-lg font-semibold">
             {text}

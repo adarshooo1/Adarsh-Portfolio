@@ -14,7 +14,7 @@ function Projects({ projects }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="xs:h-[140vh] sm:h-[150vh] relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-center mx-auto items-center z-0"
     >
       <h3 className="absolute top-24 uppercase text-2xl text-white">
         <span className="tracking-[20px]">project</span>s
@@ -24,7 +24,7 @@ function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-5 md:p-20 h-screen xs:h-screen xs:mt-40"
           >
             <motion.img
               initial={{
@@ -36,11 +36,12 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt={project?.title}
+              className="xl:w-[600px] mt-10"
             />
 
-            <div className="space-y-10 px-0 md:px-10 mx-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
-                Project {i + 1} of 3:{" "}
+            <div className="space-y-10 px-0 md:px-5 mx-w-7xl">
+              <h4 className="sm:text-md xs:text-sm md:text-3xl text-4xl font-semibold text-center uppercase">
+                Project {i + 1} / 3:{" "}
                 <span className="uppercase font-bold">
                   <ProjectTypewriter
                     words={[project?.title]}
@@ -54,7 +55,7 @@ function Projects({ projects }: Props) {
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology) => (
                   <img
-                    className="h-10 w-10"
+                    className="h-12 w-12 xs:h-6 xs:w-6"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                     alt={technology.title}
@@ -62,7 +63,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
+              <p className="md:text-md sm:text-sm lg:text-lg xl:text-xl xl:text-center text-left pb-20">
                 {project?.summary}
               </p>
             </div>
