@@ -29,7 +29,7 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2400);
+    }, 2800);
 
     return () => clearTimeout(timer);
   }, []);

@@ -18,7 +18,7 @@ const Loader = () => {
     let totalDuration = 0;
     for (let i = 0; i <= currentIndex; i++) {
       if (i === 0 || i === languages.length - 1) {
-        totalDuration = 500;
+        totalDuration = 700;
       } else {
         totalDuration = 200;
       }
