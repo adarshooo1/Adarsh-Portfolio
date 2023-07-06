@@ -29,7 +29,7 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2800);
+    }, 2400);
 
     return () => clearTimeout(timer);
   }, []);
@@ -69,7 +69,7 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
           </section>
 
           {/* Contact */}
-          <section id="contacts" className="snap-center">
+          <section id="contacts" className="snap-start">
             <Contact />
           </section>
 

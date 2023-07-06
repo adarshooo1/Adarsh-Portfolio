@@ -12,7 +12,14 @@
   }
 
   .contactInput {
-    @apply outline-none bg-gray-700/50 rounded-sm border-b px-6 py-4 border-gray-500 text-white placeholder-slate-700 transition-all focus:border-[#FB923C]/40 focus:text-[#FB923C] hover:border-[#FB923C]/40;
+    @apply outline-none bg-gray-700/50 rounded-sm border-b px-4 py-4 border-gray-500 text-white placeholder-slate-700 transition-all focus:border-[#FB923C]/40 focus:text-[#FB923C] hover:border-[#FB923C]/40     xs:w-60 xs:h-14;
+  }
+
+  .hover-translate {
+    transition: transform 0.1s;
+  }
+
+  .hover-translate:hover {
+    transform: translateY(-5px);
   }
 }
-
