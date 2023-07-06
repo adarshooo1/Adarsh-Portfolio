@@ -31,7 +31,7 @@ function Contact({}: Props) {
         <h4 className="font-semibold text-center    xl:text-5xl    lg:text-4xl    md:text-3xl    sm:text-xl    xs:mt-7">
           I have got just what you need.{" "}
           <span className="text-orange-500 animate-pulse">
-            Lets&apos;s Talk
+            Let&apos;s Talk
           </span>
         </h4>
 
@@ -96,7 +96,7 @@ function Contact({}: Props) {
               placeholder="Message"
               className="contactInput"
             />
-            <button className="bg-orange-500 py-5 px-10 text-black font-bold text-lg rounded-md   xs:w-36   xs:h-16">
+            <button className="bg-orange-500 cursor-pointer py-5 px-10 text-black font-bold text-lg rounded-md   xs:w-36   xs:h-16">
               Submit
             </button>
           </form>

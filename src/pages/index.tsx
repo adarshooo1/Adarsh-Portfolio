@@ -73,7 +73,7 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
             <Contact />
           </section>
 
-          <span className="sticky bottom-9 ml-4 flex justify-start">
+          <span className="sticky bottom-9 ml-2 flex justify-start w-[70px]">
             <Link href="#heroBanner" passHref>
               {" "}
               {/* Add the passHref prop */}
