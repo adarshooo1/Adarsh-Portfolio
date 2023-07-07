@@ -73,11 +73,11 @@ const HomePage = ({ pageInfo, skills, projects, socials }: Props) => {
             <Contact />
           </section>
 
-          <span className="sticky bottom-9 ml-2 flex justify-start w-[70px]">
+          <span className="sticky bottom-9 ml-3 flex justify-start w-[70px]">
             <Link href="#heroBanner" passHref>
               {" "}
               {/* Add the passHref prop */}
-              <footer className="w-[30px] h-[30px] cursor-pointer m-5 scroll-smooth">
+              <footer className="w-[30px] h-[30px] cursor-pointer mb-5 scroll-smooth">
                 <MdArrowUpward className="animate-bounce text-4xl text-orange-500" />
               </footer>
             </Link>

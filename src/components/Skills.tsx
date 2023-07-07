@@ -1,5 +1,5 @@
 import React from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { Skill as SkillType } from "../../typings";
 
@@ -21,7 +21,7 @@ function Skills({ skills }: Props) {
 
       <h3 className="absolute text-white top-36 uppercase tracking-[3px]      sm:text-lg      font-bold">
         Skills, I know as a{" "}
-        <span className="uppercase stroked-text text-orange-400">
+        <span className="uppercase stroked-text 2xl:stroke-none text-orange-400">
           full stack developer
         </span>
       </h3>

@@ -33,7 +33,7 @@ const HeroBanner = ({pageInfo}: Props) => {
         <h2 className="text-sm tracking-[15px] uppercase text-white pb-2 transition-all hover:scale-125">
          {pageInfo.role}
         </h2>
-        <h1 className="text-5xl lg:6xl font-semibold scroll-px-10">
+        <h1 className="text-5xl 2xl:text-7xl xl:text-6xl md:text-5xl sm:text-3xl xs:text-xl font-semibold scroll-px-10">
           <span className="mr-3 text-orange-400">{text}</span>
           <Cursor cursorColor="#FB923C" />
         </h1>
