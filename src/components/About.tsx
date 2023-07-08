@@ -54,7 +54,7 @@ const About = ({ pageInfo }: Props) => {
         </h4>
         <p className="md:text-md sm:text-sm lg:text-lg xl:text-xl text-left">
           Hi, I&apos;m{" "}
-          <span className="uppercase tracking-[3px] text-orange-500 text-lg font-semibold">
+          <span className="capitalize tracking-[3px] text-orange-500 text-lg font-semibold ml-2">
             {text}
           </span>
           <Cursor cursorColor="#FB923C" />

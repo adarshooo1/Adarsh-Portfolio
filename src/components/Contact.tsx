@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type Props = {};
 
@@ -23,9 +25,29 @@ function Contact({}: Props) {
           if (form.current) {
             form.current.reset();
           }
+          toast.success('Message sent successfully!', {
+            position: 'bottom-right',
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'dark',
+          });
         },
         (error) => {
           console.log(error.text);
+          toast.error('Failed to send message!', {
+            position: 'bottom-right',
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'dark',
+          });
         }
       );
   };
@@ -33,6 +55,7 @@ function Contact({}: Props) {
 
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-center items-center max-w-full justify-center mx-auto z-0   xl:h-screen   lg:h-[120vh]   md:h-[120vh]">
+       <ToastContainer />
       <h3 className="absolute top-24 uppercase text-2xl text-white">
         <span className="tracking-[20px]">Contact m</span>e
       </h3>
