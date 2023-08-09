@@ -112,12 +112,14 @@ function Contact({}: Props) {
                 name="user_name"
                 className="contactInput"
                 type="text"
+                required
               />
               <input
                 placeholder="Email"
                 name="user_email"
                 className="contactInput"
                 type="email"
+                required
               />
             </div>
             <input
@@ -125,11 +127,13 @@ function Contact({}: Props) {
               name="subject"
               className="contactInput"
               type="text"
+              required
             />
             <textarea
               placeholder="Message"
               name="message"
               className="contactInput"
+              required
             />
             <button type="submit" value="Send" className="bg-orange-500 cursor-pointer py-5 px-10 text-black font-bold text-lg rounded-md   xs:w-36   xs:h-16">
               Submit
