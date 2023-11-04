@@ -25,7 +25,7 @@ const About = ({ pageInfo }: Props) => {
         duration: 1.2,
       }}
       animate={{ opacity: 1 }} // Updated from `whileInView` to `animate`
-      className="h-[125vh] flex relative flex-col text-center md:text-left md:flex-row justify-evenly max-w-7xl px-10 xs:px-2 mx-auto items-center"
+      className="h-screen flex relative flex-col text-center md:text-left md:flex-row justify-evenly max-w-7xl px-10 xs:px-2 mx-auto items-center"
     >
       <h3 className="uppercase text-white absolute top-24 flex text-2xl">
         <span className="tracking-[20px]">Abou</span>t {/* Fixed typo */}

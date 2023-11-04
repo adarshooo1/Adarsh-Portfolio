@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import emailjs from "@emailjs/browser";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type Props = {};
 
@@ -25,48 +25,45 @@ function Contact({}: Props) {
           if (form.current) {
             form.current.reset();
           }
-          toast.success('Message sent successfully!', {
-            position: 'bottom-right',
+          toast.success("Message sent successfully!", {
+            position: "bottom-right",
             autoClose: 3000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: 'dark',
+            theme: "dark",
           });
         },
         (error) => {
           console.log(error.text);
-          toast.error('Failed to send message!', {
-            position: 'bottom-right',
+          toast.error("Failed to send message!", {
+            position: "bottom-right",
             autoClose: 3000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: 'dark',
+            theme: "dark",
           });
         }
       );
   };
-  
 
   return (
-    <div className="h-screen relative flex overflow-hidden flex-col text-center items-center max-w-full justify-center mx-auto z-0   xl:h-screen   lg:h-[120vh]   md:h-[120vh]">
-       <ToastContainer />
+    <div className="h-screen relative flex overflow-hidden flex-col text-center items-center max-w-full justify-center mx-auto z-0 ">
+      <ToastContainer />
       <h3 className="absolute top-24 uppercase text-2xl text-white">
         <span className="tracking-[20px]">Contact m</span>e
       </h3>
 
       {/* The Big Container that have the heading , contact and form items */}
-      <div className="flex flex-col items-center mt-20     xl:mt-32     lg:mt-2     md:-mt-6     xs:mt-20">
+      <div className="flex flex-col items-center mt-10">
         <h4 className="font-semibold text-center    xl:text-5xl    lg:text-4xl    md:text-3xl    sm:text-xl    xs:mt-7">
           I have got just what you need.{" "}
-          <span className="text-orange-500 animate-pulse">
-            Let&apos;s Talk
-          </span>
+          <span className="text-orange-500 animate-pulse">Let&apos;s Talk</span>
         </h4>
 
         {/* Div of Line just for styling */}
@@ -135,7 +132,11 @@ function Contact({}: Props) {
               className="contactInput"
               required
             />
-            <button type="submit" value="Send" className="bg-orange-500 cursor-pointer py-5 px-10 text-black font-bold text-lg rounded-md   xs:w-36   xs:h-16">
+            <button
+              type="submit"
+              value="Send"
+              className="bg-orange-500 cursor-pointer py-2 w-full text-black font-bold text-lg rounded-md"
+            >
               Submit
             </button>
           </form>
