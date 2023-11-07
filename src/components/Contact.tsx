@@ -21,7 +21,6 @@ function Contact({}: Props) {
       )
       .then(
         (result) => {
-          console.log(result.text);
           if (form.current) {
             form.current.reset();
           }
@@ -37,7 +36,6 @@ function Contact({}: Props) {
           });
         },
         (error) => {
-          console.log(error.text);
           toast.error("Failed to send message!", {
             position: "bottom-right",
             autoClose: 3000,
@@ -55,16 +53,16 @@ function Contact({}: Props) {
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-center items-center max-w-full justify-center mx-auto z-0 ">
       <ToastContainer />
-      <h3 className="absolute top-24 uppercase text-2xl text-white">
+      <div className="absolute top-24 w-full uppercase text-2xl text-white">
         <span className="tracking-[20px]">Contact m</span>e
-      </h3>
+      </div>
 
       {/* The Big Container that have the heading , contact and form items */}
       <div className="flex flex-col items-center mt-10">
-        <h4 className="font-semibold text-center    xl:text-5xl    lg:text-4xl    md:text-3xl    sm:text-xl    xs:mt-7">
+        <span className="font-semibold text-center    xl:text-5xl    lg:text-4xl    md:text-3xl    sm:text-xl    xs:mt-7">
           I have got just what you need.{" "}
           <span className="text-orange-500 animate-pulse">Let&apos;s Talk</span>
-        </h4>
+        </span>
 
         {/* Div of Line just for styling */}
         {/*           |                   Global                        |  Extra large   |            Large        |        medium        |       Smaller        |     Extra Samll   |*/}

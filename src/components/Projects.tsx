@@ -16,9 +16,9 @@ function Projects({ projects }: Props) {
     <div className="h-full relative">
       {/*Main Header */}
       <div className="w-full text-center pt-24">
-        <h3 className="uppercase text-2xl text-white">
+        <span className="uppercase text-2xl text-white">
           <span className="tracking-[20px]">project</span>s
-        </h3>
+        </span>
       </div>
 
       {/* Background Diagonal Bar */}
@@ -58,7 +58,7 @@ function Projects({ projects }: Props) {
 
             {/* Project Title */}
             <div className="space-y-10 px-0 md:px-5 mx-w-7xl">
-              <h4 className="xs:text-sm sm:text-lg  md:text-xl lg:text-2xl text-4xl font-mono text-center uppercase">
+              <div className="xs:text-sm sm:text-lg  md:text-xl lg:text-2xl text-4xl font-mono text-center uppercase">
                 Project {i + 1} / {projects.length} :{" "}
                 <span className="uppercase font-mono xs:text-sm sm:text-lg md:text-xl lg:text-2xl text-4xl">
                   <ProjectTypewriter
@@ -68,7 +68,7 @@ function Projects({ projects }: Props) {
                   />
                   <Cursor />
                 </span>
-              </h4>
+              </div>
 
               {/* ====================================================================================================== */}
 
