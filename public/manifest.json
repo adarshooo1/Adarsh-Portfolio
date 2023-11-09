@@ -1,5 +1,5 @@
 {
-  "short_name": "Portfolio",
+  "short_name": "adarsh-portfolio",
   "name": "adarsh-portfolio",
   "icons": [
     {
@@ -16,6 +16,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "##0f0f0f",
+  "background_color": "#0f0f0f",
   "theme_color": "#0f0f0f"
 }
